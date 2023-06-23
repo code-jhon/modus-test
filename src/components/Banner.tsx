@@ -13,7 +13,7 @@ const Banner: React.FC<BannerProps> = ({imageParam}) => {
       }} >
         <div className='absolute top-0 left-0 bg-gradient-to-b from-white to-transparent w-full' >
           <span 
-            className="text-transparent text-4xl capitalize font-bold p-4 pt-1"
+            className="text-transparent text-9xl capitalize font-bold p-4 pt-1"
             style={{
               backgroundImage: `url(${`https://source.unsplash.com/1600x300/?${imageParam}`})`,
               WebkitTextFillColor: 'transparent',
