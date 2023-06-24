@@ -3,15 +3,15 @@ import { Product } from '../utils/entities'
 
 type ProductItemProps = {
   product: Product;
-  setImageParam: React.Dispatch<React.SetStateAction<string>>;
+  handlerClick: (imageParam: string) => void;
 }
 
-const ProductItem = ({ product, setImageParam }: ProductItemProps) => {
+const ProductItem = ({ product, handlerClick }: ProductItemProps) => {
   const onClickHandler = () => {
     const imageParam = product.title.split(/\s+/).pop()?.toLowerCase() || "store";
-    setImageParam(imageParam);
-
+    handlerClick(imageParam);
   }
+  
   return (
     <div className="bg-gray-200 pb-4 rounded-lg" onClick={onClickHandler}>
       <img src={[...product.images].shift()} alt="Product Image" className="mb-2 w-full rounded-t-lg"  />
