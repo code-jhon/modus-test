@@ -1,3 +1,16 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.aspect-w-1 {
+  width: 100%;
+}
+
+.aspect-h-1 {
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.object-cover {
+  object-fit: cover;
+}
