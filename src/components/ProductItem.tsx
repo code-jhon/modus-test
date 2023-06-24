@@ -12,6 +12,7 @@ const ProductItem = ({ product, handlerClick }: ProductItemProps) => {
     handlerClick(imageParam);
   }
   
+
   return (
     <div className="bg-gray-200 pb-4 rounded-lg" onClick={onClickHandler}>
       <img src={[...product.images].shift()} alt="Product Image" className="mb-2 w-full rounded-t-lg"  />
