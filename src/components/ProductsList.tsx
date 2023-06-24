@@ -5,7 +5,7 @@ import ProductItem from "./ProductItem";
 import ProductDetail from "./ProductDetail";
 
 interface ProductsListProps {
-  data: Product[];
+  data: Product[] | undefined;
   setImageParam: React.Dispatch<React.SetStateAction<string>>;
 }
 
@@ -22,7 +22,7 @@ const ProductsList: React.FC<ProductsListProps> = ({ data, setImageParam } ) => 
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-6">
-      {data.map((product) => (<div key={product.id} onClick={()=>setProduct(product)}><ProductItem product={product} handlerClick={handlerClick} /></div>) )}
+      {data && data.map((product) => (<div key={product.id} onClick={()=>setProduct(product)}><ProductItem product={product} handlerClick={handlerClick} /></div>) )}
       { product !== null && <ProductDetail product={product} onClose={handleClose} />}
     </div>
   );
