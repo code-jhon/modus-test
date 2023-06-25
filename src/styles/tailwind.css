@@ -14,3 +14,7 @@
 .object-cover {
   object-fit: cover;
 }
+
+body{
+  background-color: #FBFBFB;
+}

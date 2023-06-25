@@ -14,7 +14,14 @@ const Content: React.FC = () => {
 
   const content = (
     <div className='w-full align-middle'>
-      { isLoading ? <img src={loading} alt="image" /> : <ProductsList data={data} setImageParam={setImageParam} /> }
+      { isLoading 
+          ? (
+              <div className="flex justify-center items-center h-screen">
+                <img src={loading} alt="image" />
+              </div>
+            ) 
+          : <ProductsList data={data} setImageParam={setImageParam} /> 
+      }
     </div>
   )
 
