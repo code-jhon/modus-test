@@ -16,7 +16,7 @@ const Content: React.FC = () => {
     <div className='w-full align-middle'>
       { isLoading 
           ? (
-              <div className="flex justify-center items-center h-screen">
+              <div className="flex justify-center items-center">
                 <img src={loading} alt="image" />
               </div>
             ) 
