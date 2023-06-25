@@ -5,7 +5,7 @@ import ProductItem from "./ProductItem";
 import ProductDetail from "./ProductDetail";
 
 interface ProductsListProps {
-  data: Product[];
+  data: Product[] | undefined;
   setImageParam: React.Dispatch<React.SetStateAction<string>>;
 }
 
